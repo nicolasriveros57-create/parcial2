@@ -8,8 +8,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api', clientesRoutes)
-
+app.use('/', clientesRoutes)
 
 app.get('/', (req, res) => {
   res.json({ mensaje: 'Backend del parcial funcionando' })
